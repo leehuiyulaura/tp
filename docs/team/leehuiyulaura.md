@@ -9,6 +9,8 @@ title: Laura Lee's Project Portfolio Page
 ConnectNUS is a desktop address book application used for NUS CS students to keep track of their own modules,
 and their friend's modules and contacts as well.
 
+<div style="page-break-after: always;"></div>
+
 ## Contributions
 Given below are my contributions to the project.
 
@@ -19,8 +21,6 @@ Given below are my contributions to the project.
 
   <img src="../images/FilterTagFriends.png" width="250" />
 
-<div style="page-break-after: always;"></div>
-
 * **New Feature**: Filter Contacts by Current Module(s).
   * What it does: Lists out all persons in the contact list that have the current module(s) specified by the user in
     their current modules list.
@@ -29,6 +29,7 @@ Given below are my contributions to the project.
 
   <img src="../images/FilterCurrModCS1000.png" width="250" />
 
+<div style="page-break-after: always;"></div>
 
 * **New Feature**: Filter Contacts by Previous Module(s).
   * What it does: Lists out all persons in the contact list that have the previous module(s) specified by the user in
@@ -38,8 +39,6 @@ Given below are my contributions to the project.
 
   <img src="../images/FilterPrevModCS2000.png" width="250" />
 
-<div style="page-break-after: always;"></div>
-
 * **New Feature**: Filter Contacts by Planned Module(s).
   * What it does: Lists out all persons in the contact list that have the planned module(s) specified by the user in
   * their planned modules list.
@@ -48,6 +47,7 @@ Given below are my contributions to the project.
 
   <img src="../images/FilterPlanModCS3333.png" width="250" />
 
+<div style="page-break-after: always;"></div>
 
 * **New Feature**: Refreshing User and all Persons in the contact list when a New Semester starts.
   * What it does: Moves all the current modules in the current module lists of both the user and all persons in the user's
@@ -75,6 +75,7 @@ Given below are my contributions to the project.
 
   <img src="../images/AddModulesToUi.png" width="250" />
 
+<div style="page-break-after: always;"></div>
 
 * **Documentation**:
   * User Guide:
