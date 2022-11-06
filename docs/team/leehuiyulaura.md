@@ -21,6 +21,8 @@ Given below are my contributions to the project.
 
   <img src="../images/FilterTagFriends.png" width="250" />
 
+<div style="page-break-after: always;"></div>
+
 * **New Feature**: Filter Contacts by Current Module(s).
   * What it does: Lists out all persons in the contact list that have the current module(s) specified by the user in
     their current modules list.
@@ -38,6 +40,8 @@ Given below are my contributions to the project.
   * Highlights:
 
   <img src="../images/FilterPrevModCS2000.png" width="250" />
+
+<div style="page-break-after: always;"></div>
 
 * **New Feature**: Filter Contacts by Planned Module(s).
   * What it does: Lists out all persons in the contact list that have the planned module(s) specified by the user in
