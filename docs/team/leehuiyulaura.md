@@ -17,8 +17,9 @@ Given below are my contributions to the project.
   * Justification: To allow you to quickly find all the people belonging to a specific category.
   * Highlights:
 
-  <img src="../images/FilterTagFriends.png" width="300" />
+  <img src="../images/FilterTagFriends.png" width="250" />
 
+<div style="page-break-after: always;"></div>
 
 * **New Feature**: Filter Contacts by Current Module(s).
   * What it does: Lists out all persons in the contact list that have the current module(s) specified by the user in
@@ -26,7 +27,7 @@ Given below are my contributions to the project.
   * Justification: To allow you to quickly find all the people taking specific module(s).
   * Highlights:
 
-  <img src="../images/FilterCurrModCS1000.png" width="300" />
+  <img src="../images/FilterCurrModCS1000.png" width="250" />
 
 
 * **New Feature**: Filter Contacts by Previous Module(s).
@@ -35,8 +36,9 @@ Given below are my contributions to the project.
   * Justification: To allow you to quickly find all the people who have taken specific module(s).
   * Highlights:
 
-  <img src="../images/FilterPrevModCS2000.png" width="300" />
+  <img src="../images/FilterPrevModCS2000.png" width="250" />
 
+<div style="page-break-after: always;"></div>
 
 * **New Feature**: Filter Contacts by Planned Module(s).
   * What it does: Lists out all persons in the contact list that have the planned module(s) specified by the user in
@@ -44,7 +46,7 @@ Given below are my contributions to the project.
   * Justification: To allow you to quickly find all the people who are planning to take specific module(s).
   * Highlights:
 
-  <img src="../images/FilterPlanModCS3333.png" width="300" />
+  <img src="../images/FilterPlanModCS3333.png" width="250" />
 
 
 * **New Feature**: Refreshing User and all Persons in the contact list when a New Semester starts.
@@ -55,8 +57,9 @@ Given below are my contributions to the project.
     and their contacts will be taking in the upcoming semester to their app.
   * Highlights:
 
-  <img src="../images/AfterNextSem.png" width="300" />
+  <img src="../images/AfterNextSem.png" width="250" />
 
+<div style="page-break-after: always;"></div>
 
 * **Code contributed**: [RepoSense link](https://nus-cs2103-ay2223s1.github.io/tp-dashboard/?search=leehuiyulaura&breakdown=true&sort=groupTitle&sortWithin=title&since=2022-09-16&timeframe=commit&mergegroup=&groupSelect=groupByRepos&checkedFileTypes=docs~functional-code~test-code~other)
 
@@ -64,13 +67,13 @@ Given below are my contributions to the project.
 * **Enhancements to existing features**: Update UI to display the user's profile.
   * Highlights:
 
-  <img src="../images/AddUserProfile.png" width="300" />
+  <img src="../images/AddUserProfile.png" width="250" />
 
 
 * **Enhancements to existing features**: Update UI to display current, previous and planned modules for user and all persons in the contact list.
   * Highlights:
 
-  <img src="../images/AddModulesToUi.png" width="300" />
+  <img src="../images/AddModulesToUi.png" width="250" />
 
 
 * **Documentation**:
