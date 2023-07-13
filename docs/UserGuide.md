@@ -26,7 +26,7 @@ title: User Guide
     - [Editing user's modules](#edit-users-modules)
     - [Editing contact's modules](#edit-contacts-modules)
     - [Checking modules left](#checking-modules-left)
-    - [Refreshing to Next Semester](#refreshing-to-next-semester)
+    - [Refreshing to next semester](#refreshing-to-next-semester)
   - [Timetable features](#timetable-features)
     - [Adding lessons](#adding-lessons)
     - [Listing lessons / Viewing timetable](#listing-lessons--viewing-timetable)
@@ -46,6 +46,8 @@ title: User Guide
 - [Command Summary](#command-summary)
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 # ConnectNUS User Guide
 
@@ -75,6 +77,8 @@ provided**.
 
 Whenever you are in doubt, forget the command formats for any feature, need help troubleshooting
 or you simply want to maximise your use of this application, do remember to revisit this User Guide.
+
+<div style="page-break-after: always;"></div>
 
 ## Navigating the User Guide
 
@@ -110,6 +114,8 @@ As recommended in the introduction, we would like to direct you to read the [Glo
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ## Glossary
 
 The glossary illustrated in the table below will help you understand the terminologies used in this
@@ -124,7 +130,7 @@ User Guide.
     <td><strong>Command Line Interface (CLI)</strong></td>
     <td>
       A text-based interface that is used to operate software (such as ConnectNUS) and operating systems. CLI
-      allows a user to perform tasks by entering commands. </br>
+      allows a user to perform tasks by entering commands. <br>
       Users enter the specific command, press “Enter”, and then wait for a response.
       After receiving the command, the CLI processes it accordingly and shows the output/result on the screen.
     </td>
@@ -146,7 +152,7 @@ User Guide.
     </td>
   </tr>
   <tr>
-    <td><strong>💡Tip</strong></td>
+    <td><strong>:bulb: Tip</strong></td>
     <td>
       To provide you with suggestions on how to use the commands as well as address potential confusions when using
       these commands, so you will be able to better understand how the commands work.
@@ -164,6 +170,8 @@ User Guide.
 As recommended in the introduction, we would like to direct you to read the [Quick Start](#quick-start) section next.
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ## Quick Start
 
@@ -197,6 +205,8 @@ on the jar file in the folder. This to ensure the jar file is using the correct 
 Step 6: The GUI similar to the below should appear in a few seconds. Do note that the app contains some sample data.
 
   <img src="images/Ui.png" width="390" />
+
+<div style="page-break-after: always;"></div>
 
 Step 7: Refer to the [Features](#features) section below to for more details on how to use ConnectNUS.
 
@@ -266,6 +276,8 @@ You may:
 - [Edit user](#editing-user)
 - [Delete user](#deleting-user)
 
+<div style="page-break-after: always;"></div>
+
 ### Adding user
 
 Add your own user profile into the contact list.
@@ -286,6 +298,8 @@ Examples:
 ![Add User Profile](images/AddUserProfile.png)
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Editing user
 
@@ -318,6 +332,8 @@ Format: `delete user`
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ## Contact list features
 
 These are features that allow you to manage the list of persons in ConnectNUS, so you can keep track of the details you need.
@@ -347,6 +363,8 @@ Examples:
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Listing contacts
 
 Shows a list of all persons in your contact list, so you can view all your contacts.
@@ -357,9 +375,11 @@ Format: `list`
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Finding contacts
 
-Finds persons whose names contain any of the given keywords, for easy viewing of those you are looking for.
+Finds persons whose names contain any of the given keywords, to quickly view those you want.
 
 Format: `find KEYWORD [MORE_KEYWORDS]…`
 
@@ -370,13 +390,13 @@ Format: `find KEYWORD [MORE_KEYWORDS]…`
 * Persons matching at least one keyword will be returned (i.e. OR search). e.g. `Hans Bo` will return `Hans Gruber`, `Bo Yang`
 
 Examples:
+* `find alex David` returns `Alex Yeoh`, `David Li`
 
-* `find John` returns john and John Doe
-* `find alex david` returns `Alex Yeoh`, `David Li`
-
-![Find Command](images/FindCommand.png)
+<img src="images/FindCommand.png" width="550">
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Editing contacts
 
@@ -419,6 +439,8 @@ Examples:
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Clearing all contacts
 
 Deletes all contacts from your contact list with one command, so you can an empty contact list to start with.
@@ -433,6 +455,8 @@ Format: `clear`
 </div>
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ## Module features
 
@@ -465,6 +489,8 @@ Examples:
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Edit contact's modules
 
 Directly edit your contact's module list by adding or deleting modules from their list, so you can keep track of
@@ -487,9 +513,11 @@ Examples:
 
 * `module 1 curr/CS2101 prev/CS2030S plan/CS2102 rm/GEA1000` adds the first 3 modules into the first contact's respective lists and removes GEA1000 from all module lists
 
-![Edit Modules](images/EditModules.png)
+<img src="images/EditModules.png" width="500">
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Checking Modules Left
 
@@ -501,10 +529,9 @@ Format: `modsleft INDEX`
 * Compares your Current Modules and Previous Modules list with the list of modules required to clear requirements and outputs the remaining modules needed to clear it.
 * The index refers to the index number shown in the displayed focus area list.
 * The index **must be a positive integer between 1 and 11**
-* This feature is currently compatible with CS students who enrolled in AY21/22, additional compatability with students from other AYs and other majors will be added in future versions.
+* This feature is currently compatible with CS students who enrolled in AY21/22, additional compatability with students from other AYs and majors will be added in future versions.
 
 The index reference list is as shown:
-
 1. CS Core Requirements
 2. Algorithms & Theory
 3. Artificial Intelligence
@@ -521,11 +548,13 @@ Examples:
 
 * `modsleft 1` outputs the list of remaining CS Core Requirement modules that you have yet to clear.
 
-![Modules Left](images/ModulesLeft.png)
+<img src="images/ModulesLeft.png" width="480">
 
 [Scroll back to top](#table-of-contents)
 
-### Refreshing to Next Semester
+<div style="page-break-after: always;"></div>
+
+### Refreshing to next semester
 
 Moves all the current modules in the current module lists of both the user and all persons in the user's contact list into
 their previous modules list when a next semester command is given. This enables user's to update their ConnectNUS app
@@ -538,9 +567,11 @@ Examples:
 
 * `nextsem` moves all current modules into the previous modules list of the user and all contacts and removes all modules in the current modules list.
 
-![Next Semester](images/AfterNextSem.png)
+<img src="images/AfterNextSem.png" width="550">
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ## Timetable features
 
@@ -576,6 +607,8 @@ Examples:
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Listing lessons / Viewing timetable
 
 Shows the list of lessons in a separate window, sorted by day and time.
@@ -589,7 +622,7 @@ Format for contact: `timetable INDEX`
 
 A window similar to this will be shown:
 
-<img src="images/TimetableWindow.png" width="300" />
+<img src="images/TimetableWindow.png" width="200" />
 
 * Shows the timetable of the user or specified `INDEX`.
   * The index refers to the index number shown in the displayed contact list.
@@ -610,6 +643,8 @@ Examples:
 * `timetable 1` will display the **first displayed contact's** timetable.
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Deleting lessons
 
@@ -640,6 +675,8 @@ Examples:
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ## Filtering features
 
 These features allow you to only see the list of people adhering to the criteria set, so that you can view only those persons
@@ -665,13 +702,15 @@ Examples:
 
 * `filtertag friends` lists all contacts with a friends tag.
 
-![Filter Tag 1](images/FilterTagFriends.png)
+<img src="images/FilterTagFriends.png" width="200">
 
 * `filtertag friends family` lists all contacts with either a friends or family tag.
 
-![Filter Tag 2](images/FilterTagFriendsFamily.png)
+<img src="images/FilterTagFriendsFamily.png" width="250">
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Filtering Current Modules
 
@@ -687,9 +726,11 @@ Examples:
 
 * `filtercurrmod CS1000` lists all contacts with module code CS1000 in their current modules list.
 
-![Filter Current Module](images/FilterCurrModCS1000.png)
+<img src="images/FilterCurrModCS1000.png" width="250">
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Filtering Previous Modules
 
@@ -705,9 +746,12 @@ Examples:
 
 * `filterprevmod CS2000` lists all contacts with module code CS2000 in their previous modules list.
 
-![Filter Previous Module](images/FilterPrevModCS2000.png)
+<img src="images/FilterPrevModCS2000.png" width="300">
+
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Filtering Planned Modules
 
@@ -721,12 +765,13 @@ Format: `filterplanmod PLANNED_MODULE [PLANNED_MODULE]…`
 
 Examples:
 
-* `filterplanmod CS23333` lists all contacts with module code CS3333 in their planned modules list.
+* `filterplanmod CS3333` lists all contacts with module code CS3333 in their planned modules list.
 
-![Filter Planned Module](images/FilterPlanModCS3333.png)
+* <img src="images/FilterPlanModCS3333.png" width="350">
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
 
 ## Data features
 
@@ -743,7 +788,6 @@ ConnectNUS data is saved in the hard disk automatically after any command that c
 
 [Scroll back to top](#table-of-contents)
 
-
 ### Editing the data file
 
 ConnectNUS data is saved as a JSON file `[JAR file location]/data/ConnectNUS.json`. Advanced users are welcome to update data directly by editing that data file,
@@ -755,6 +799,7 @@ so you can quickly manipulate the data based on areas you wish to edit.
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
 
 ## Other features
 
@@ -775,23 +820,30 @@ Examples:
 
 * To demonstrate the `undo`/`redo` feature, we will first add a contact into our contact list by inputting the command `add n/Ruijie p/91234567 e/kohrj@gmail.com a/Kent Ridge Avenue g/rjkoh t/Classmate curr/CS2100 prev/CS1101S plan/CS2109` which adds module contact Ruijie to our contact list with all the details specified.
 
-![Undo/Redo 0](images/UndoRedoExample0.png)
+<img src="images/UndoRedoExample0.png" width="500">
 
 * `undo` undoes the latest action of adding "Ruijie" as a contact.
 
-![Undo/Redo 1](images/UndoRedoExample1.png)
+<img src="images/UndoRedoExample1.png" width="500">
 
 * `redo` redoes the latest undo action of undoing "Ruijie" as a contact.
 
-![Undo/Redo 2](images/UndoRedoExample2.png)
+<img src="images/UndoRedoExample2.png" width="500">
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Copying GitHub URL
 
 The copy GitHub Profile URL button copies the user or contact's GitHub profile URL into your clipboard which you can then paste into your browser, so you can view their profile.
 
 <img src="images/GithubButton.png" width="200" />
+
+<div markdown="span" class="alert alert-primary">
+
+:bulb: **Tip:** Ensure that you have a stable Internet connection to connect to Github.
+</div>
 
 [Scroll back to top](#table-of-contents)
 
@@ -802,6 +854,8 @@ Exits the program.
 Format: `exit`
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ## Command summary
 
@@ -852,13 +906,13 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Listing contacts</strong>
+    <td><strong>Listing Contacts</strong>
     </td>
     <td><code>list</code></td>
   </tr>
 
   <tr>
-    <td><strong>Finding contacts</strong>
+    <td><strong>Finding Contacts</strong>
     </td>
     <td>
       <code>find KEYWORD [MORE_KEYWORDS]…</code>
@@ -882,7 +936,7 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Delete Contact</strong>
+    <td><strong>Deleting Contact</strong>
     </td>
     <td>
       <code>delete INDEX</code>
@@ -893,7 +947,7 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Clear all contacts</strong>
+    <td><strong>Clearing All Contacts</strong>
     </td>
     <td><code>clear</code></td>
   </tr>
@@ -958,7 +1012,7 @@ Format: `exit`
 
 
   <tr>
-    <td><strong>Viewing Lessons / Timetable</strong>
+    <td><strong>Listing Lessons / Viewing Timetable</strong>
     </td>
     <td>
       <code>timetable user</code>
@@ -972,7 +1026,7 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Deleting lesson</strong>
+    <td><strong>Deleting Lesson</strong>
     </td>
     <td>
       <code>remove user l/TYPE m/MODULE_CODE day/DAY_NUMBER start/START_TIME end/END_TIME</code>
@@ -989,7 +1043,7 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Filter Tags</strong>
+    <td><strong>Filtering Tags</strong>
     </td>
     <td>
       <code>filtertag TAG_NAME [TAG_NAME]…</code>
@@ -1000,7 +1054,7 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Filter Current Modules</strong>
+    <td><strong>Filtering Current Modules</strong>
     </td>
     <td>
       <code>filtercurrmod CURRENT_MODULE [CURRENT_MODULE]…</code>
@@ -1014,7 +1068,7 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Filter Previous Modules</strong>
+    <td><strong>Filtering Previous Modules</strong>
     </td>
     <td>
       <code>filterprevmod PREVIOUS_MODULE [PREVIOUS_MODULE]…</code>
@@ -1028,7 +1082,7 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Filter Planned Modules</strong>
+    <td><strong>Filtering Planned Modules</strong>
     </td>
     <td>
       <code>filterplanmod PLANNED_MODULE [PLANNED_MODULE]…</code>
@@ -1051,7 +1105,7 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Viewing help</strong>
+    <td><strong>Viewing Help</strong>
     </td>
     <td>
       <code>help</code>
@@ -1059,13 +1113,12 @@ Format: `exit`
   </tr>
 
   <tr>
-    <td><strong>Exiting the program</strong>
+    <td><strong>Exiting The Program</strong>
     </td>
     <td>
       <code>exit</code>
     </td>
   </tr>
-
 </table>
 
 [Scroll back to top](#table-of-contents)

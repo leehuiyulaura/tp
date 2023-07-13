@@ -32,6 +32,7 @@ title: Developer Guide
 - [Appendix: Instructions for Manual Testing](#appendix-instructions-for-manual-testing)
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## **ConnectNUS Developer Guide**
 
@@ -106,13 +107,13 @@ on how you can perform testing on the features in ConnectNUS. In this section, y
 
 You can jump into the various sections from the Table of Contents to view different sections of the Developer Guide, and
 click on [Scroll back to top](#table-of-contents), which can be found at the end of every section, to access the Table
-of Contents to quickly jump to another section without manually scrolling through the Developer Guide.
+of Contents to quickly jump to another section.
 
-As recommended in the introduction, we would like to direct you to read the [Glossary](#glossary) section next.
+We would recommend you to read the [Glossary](#glossary) section next.
 
 [Scroll back to top](#table-of-contents)
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## **Glossary**
 
@@ -155,7 +156,7 @@ Developer Guide.
     </td>
   </tr>
   <tr>
-    <td><strong>Private contact detail</strong></td>
+    <td><strong>Private Contact Detail</strong></td>
     <td>
       A contact detail that is not meant to be shared with others.
     </td>
@@ -214,6 +215,12 @@ Developer Guide.
       Describes an interaction between the user and the system for a specific functionality of the system.
     </td>
   </tr>
+  <tr>
+    <td><strong>Teaching Assistant</strong></td>
+    <td>
+      Employed staff by NUS who teach tutorials for specific modules for undergraduates. They will be guided by the module coordinators or instructors.
+    </td>
+  </tr>
 </table>
 
 --------------------------------------------------------------------------------------------------------------------
@@ -225,6 +232,7 @@ Developer Guide.
 [Scroll back to top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## **Setting up, getting started**
 
@@ -244,9 +252,11 @@ The ***Architecture Diagram*** given above explains the high-level design of the
 
 Given below is a quick overview of main components and how they interact with each other.
 
+<div style="page-break-after: always;"></div>
+
 **Main components of the architecture**
 
-**`Main`** has two classes called [`Main`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/Main.java) and [`MainApp`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/MainApp.java). It is responsible for,
+**`Main`** has two classes called [`Main`](https://github.com/AY2223S1-CS2103T-T14-4/tp/tree/master/src/main/java/seedu/address/Main.java) and [`MainApp`](https://github.com/AY2223S1-CS2103T-T14-4/tp/tree/master/src/main/java/seedu/address/MainApp.java). It is responsible for,
 * At app launch: Initializes the components in the correct sequence, and connects them up with each other.
 * At shut down: Shuts down the components and invokes cleanup methods where necessary.
 
@@ -269,7 +279,9 @@ The *Sequence Diagram* below shows how the components interact with each other f
 Each of the four main components (also shown in the diagram above),
 
 * defines its *API* in an `interface` with the same name as the Component.
-* implements its functionality using a concrete `{Component Name}Manager` class (which follows the corresponding API `interface` mentioned in the previous point.
+* implements its functionality using a concrete `{Component Name}Manager` class (which follows the corresponding API `interface` mentioned in the previous point).
+
+<div style="page-break-after: always;"></div>
 
 For example, the `Logic` component defines its API in the `Logic.java` interface and implements its functionality using the `LogicManager.java` class which follows the `Logic` interface. Other components interact with a given component through its interface rather than the concrete class (reason: to prevent outside component's being coupled to the implementation of a component), as illustrated in the (partial) class diagram below.
 
@@ -278,6 +290,8 @@ For example, the `Logic` component defines its API in the `Logic.java` interface
 The sections below give more details of each component.
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### UI component
 
@@ -298,9 +312,11 @@ The `UI` component,
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Logic component
 
-**API** : [`Logic.java`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/logic/Logic.java)
+**API** : [`Logic.java`](https://github.com/AY2223S1-CS2103T-T14-4/tp/tree/master/src/main/java/seedu/address/logic/Logic.java)
 
 Here's a (partial) class diagram of the `Logic` component:
 
@@ -310,14 +326,15 @@ How the `Logic` component works:
 1. When `Logic` is called upon to execute a command, it uses the `AddressBookParser` class to parse the user command.
 1. This results in a `Command` object (more precisely, an object of one of its subclasses e.g., `AddCommand`) which is executed by the `LogicManager`.
 1. The command can communicate with the `Model` when it is executed (e.g. to add a person).
-1. The result of the command execution is encapsulated as a `CommandResult` object which is returned back from `Logic`.
-
+1. The result of the command execution is encapsulated as a `CommandResult` object which is returned from `Logic`.
+<div style="page-break-after: always;"></div>
 The Sequence Diagram below illustrates the interactions within the `Logic` component for the `execute("delete 1")` API call.
 
 ![Interactions Inside the Logic Component for the `delete 1` Command](images/DeleteSequenceDiagram.png)
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:** The lifeline for `DeleteCommandParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
 </div>
+<div style="page-break-after: always;"></div>
 
 Here are the other classes in `Logic` (omitted from the class diagram above) that are used for parsing a user command:
 
@@ -329,8 +346,10 @@ How the parsing works:
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Model component
-**API** : [`Model.java`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/model/Model.java)
+**API** : [`Model.java`](https://github.com/AY2223S1-CS2103T-T14-4/tp/tree/master/src/main/java/seedu/address/model/Model.java)
 
 ![Model Class Diagram](images/ModelClassDiagram.png)
 
@@ -342,6 +361,8 @@ The `Model` component,
 * stores a `UserPref` object that represents the user’s preferences. This is exposed to the outside as a `ReadOnlyUserPref` objects.
 * does not depend on any of the other three components (as the `Model` represents data entities of the domain, they should make sense on their own without depending on other components)
 
+<div style="page-break-after: always;"></div>
+
 <div markdown="span" class="alert alert-info">:information_source: **Note:** An alternative (arguably, a more OOP) model is given below. It has a `Tag` list in the `AddressBook`, which `Person` references. This allows `AddressBook` to only require one `Tag` object per unique tag, instead of each `Person` needing their own `Tag` objects. Similarly, there is a `CurrentModule`, `PlannedModule` and `PreviousModule` lists and each unique instance has its own object. <br>
 
 ![Better Model Class Diagram](images/BetterModelClassDiagram.png)
@@ -350,9 +371,11 @@ The `Model` component,
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Storage component
 
-**API** : [`Storage.java`](https://github.com/se-edu/addressbook-level3/tree/master/src/main/java/seedu/address/storage/Storage.java)
+**API** : [`Storage.java`](https://github.com/AY2223S1-CS2103T-T14-4/tp/tree/master/src/main/java/seedu/address/storage/Storage.java)
 
 ![Storage Class Diagram](images/StorageClassDiagram.png)
 
@@ -370,12 +393,13 @@ Classes used by multiple components are in the `seedu.addressbook.commons` packa
 [Scroll back to top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## **Implementation**
 
 This section describes some noteworthy details on how certain features are implemented.
 
-### Person Class
+### **Person Class**
 Each `Person` in the AddressBook is implemented in the following way:
 
 ![Person Class Diagram](images/PersonClassDiagram.png)
@@ -383,7 +407,9 @@ Each `Person` in the AddressBook is implemented in the following way:
 All `Person` have a `Name`, `Email`, `Address` and `Phone` and a set of `Tag`, `CurrentModule`, `PreviousModule`, `PlannedModule` and `Lesson`.
 `Person`s can have a `Github` URL to their profile added, and as many `Tags`, `Modules` and `Lessons` as desired.
 
-### User Class
+<div style="page-break-after: always;"></div>
+
+### **User Class**
 
 `User` Class is implemented in a similar way.
 
@@ -391,6 +417,8 @@ All `Person` have a `Name`, `Email`, `Address` and `Phone` and a set of `Tag`, `
 
 `User` has a `Name`, `Email`, `Address` and `Phone` and a set of `CurrentModule`, `PreviousModule`, `PlannedModule`, and `Lesson`.
 `User` can have a `Github` URL to their profile added, and as many `Modules` and `Lessons` as desired.
+
+<div style="page-break-after: always;"></div>
 
 #### Design Considerations
 
@@ -406,7 +434,9 @@ in design.
 
 [Scroll back to top](#table-of-contents)
 
-### Module Class
+<div style="page-break-after: always;"></div>
+
+### **Module Class**
 `CurrentModule`, `PlannedModule`, and `PreviousModule` implement the `Module` interface.
 
 ![Module Class Diagram](images/ModuleClassDiagram.png)
@@ -425,7 +455,9 @@ make the program slow.
 
 [Scroll back to top](#table-of-contents)
 
-### Edit Modules
+<div style="page-break-after: always;"></div>
+
+### **Edit Modules**
 
 Editing modules is implemented such that you can directly add modules into each list of current, previous or planned modules.
 Users can also use this command to remove all instances of the same module from each list.
@@ -439,6 +471,8 @@ Given below is a sequence diagram to illustrate how the module lists are updated
 
 ![Module Command Sequence Diagram](images/ModuleCommandSequenceDiagram.png)
 
+<div style="page-break-after: always;"></div>
+
 Given below is an activity diagram to illustrate the behaviour of editing Modules within `Logic`.
 
 ![Module Activity Diagram](images/ModuleActivityDiagram.png)
@@ -451,16 +485,19 @@ Removal of modules does not check the module lists to see if the module is prese
 
 [Scroll back to top](#table-of-contents)
 
-### Checking Modules Left
+<div style="page-break-after: always;"></div>
 
+### **Checking Modules Left**
 This feature compares the user's current and previous modules list with a fixed list of CS Core Requirements or focus area
-modules. The program then finds the difference between the user's lists and the fixed list and outputs it onto the ResultDisplay.
+modules. The program then finds the difference between the user's lists and the fixed list and outputs it onto the `ResultDisplay`.
 
 #### Implementation Flow
 
-Given below is an activity diagram to illustrate the behaviour of checking Modules left within `Logic`.
+Below is an activity diagram to illustrate the behaviour of checking Modules left within `Logic`.
 
 ![Modules Left Activity Diagram](images/ModulesLeftActivityDiagram.png)
+
+<div style="page-break-after: always;"></div>
 
 #### Design Considerations
 
@@ -471,7 +508,9 @@ batch and major for now.
 
 [Scroll back to top](#table-of-contents)
 
-### Refreshing to Next Semester
+<div style="page-break-after: always;"></div>
+
+### **Refreshing to Next Semester**
 ConnectNUS has a feature that helps you to update the previous module lists and clear the current module list of your profile
 as well as any persons stored in the contact list at the start of each semester so that it is easy for you to update
 yours and your friend's profiles.
@@ -489,7 +528,9 @@ contact list will be cleared.
 
 [Scroll back to top](#table-of-contents)
 
-### Adding Lessons
+<div style="page-break-after: always;"></div>
+
+### **Adding Lessons**
 ConnectNUS has a feature that allows you to add lessons to your profile as well as any persons stored in the contact list,
 so that it is easy to keep track of yours and your friend's schedules.
 
@@ -519,6 +560,8 @@ The following class diagram illustrates the class diagram of the `Lesson` class 
 Each `Lesson` has a `moduleName:String`, `day:int` (between 1-7 inclusive, where 1 is Monday and 7 is Sunday),
 `type:String` (where type is tut / rec / lab / lec), `start:LocalTime` and `end:LocalTime` to in HH:mm format.
 
+<div style="page-break-after: always;"></div>
+
 #### Implementation Flow
 
 Given below is a sequence diagram to illustrate how the timetable mechanism behaves after the user attempts to add a tutorial.
@@ -529,13 +572,15 @@ Given below is an activity diagram to illustrate the behaviour of adding a Lesso
 
 ![LessonActivityDiagram](images/LessonActivityDiagram-0.png)
 
+<div style="page-break-after: always;"></div>
+
 #### Design Considerations
 **Aspect 1: How to implement the `Lesson` Class:**
 
 * **Alternative 1 (current choice):** No dependency on `CurrentModule` i.e. moduleName is a `String`.
   * Pros:
     * Faster as there is no need to check through set of `CurrentModule`s before adding lesson.
-    * More flexible as user is able to add lessons or activities that are not in the list of `CurrentModule` e.g. if contact is a TA.
+    * More flexible as user is able to add lessons or activities that are not in the list of `CurrentModule` e.g. if contact is a teaching assistant.
   * Cons: Lack of input validation - user may input invalid lessons that he/she is not taking.
 
 
@@ -546,7 +591,7 @@ Given below is an activity diagram to illustrate the behaviour of adding a Lesso
     * Unable to accommodate alternative activities being added in the timetable.
 
 
-* **Decision:** Alternative 1 as speed is important. There are a lot of lessons are expected to be added, since there is about 15 lessons a week per person,
+* **Decision:** We chose Alternative 1 as speed is important. There are a lot of lessons are expected to be added, since there is about 15 lessons a week per person,
 that has to be multiplied by the number of contacts in ConnectNUS.
 
 **Aspect 2: How to implement the day in `Lesson` Class:**
@@ -569,8 +614,9 @@ that has to be multiplied by the number of contacts in ConnectNUS.
     * Slower sorting as `DayOfWeek` has to be converted to `int` to sort.
     * Does not address issue of unintuitive input for day in command.
 
-* **Decision:** Alternative 1 as speed is important as mentioned in Aspect 1.
+* **Decision:** We chose Alternative 1 as speed is important as mentioned in Aspect 1.
 
+<div style="page-break-after: always;"></div>
 
 **Aspect 3: Data Structure to store all `Lesson`s:**
 
@@ -584,15 +630,17 @@ that has to be multiplied by the number of contacts in ConnectNUS.
   * Cons: No removal of duplicates
 
 
-* **Decision:** Alternative 1 for fewer bugs due to duplicates that may fall through our checks. As sorting is only done
+* **Decision:** We chose Alternative 1 to reduce the chances of bugs occurring due to duplicates that may fall through our checks. As sorting is only done
 during `timetable` commands which will be called significantly fewer times than `lesson` commands, speed of sorting is not
 as significant of an issue.
 
 [Scroll back to top](#table-of-contents)
 
-### Viewing Timetable
+<div style="page-break-after: always;"></div>
+
+### **Viewing Timetable**
 ConnectNUS gives you the ability to view not only your own timetable, but that of your contacts as well, after `Lesson`s
-have been added to your profile and their contact. This makes deconflicting schedules significantly faster and meetings can
+have been added to your profile and their contact. This makes de-conflicting schedules significantly faster and meetings can
 be arranged easily.
 
 The command has the prefix `timetable` and has the parameters
@@ -600,7 +648,7 @@ The command has the prefix `timetable` and has the parameters
 
 When the user executes the timetable command, a window will pop up which will display the timetable of the user or the specified index in the user's contacts, similar to the window shown below.
 
-![Timetable window](images/TimetableWindow.png)
+<img src="images/TimetableWindow.png" width="200">
 
 The timetable will display the lists of all lessons added to the user or user's contacts of the specified index in
 chronological order.
@@ -615,6 +663,8 @@ Given below are some examples of a user command to show a `Timetable`.
 3. Example 3 : Command to show the timetable of the user's tenth contact,
 - `timetable 10`
 
+<div style="page-break-after: always;"></div>
+
 #### Implementation flow
 
 Given below is a sequence diagram to illustrate how the timetable is displayed after the user attempts to show his/her
@@ -628,6 +678,8 @@ that is being shown in the Timetable Window.
 Before `UI` shows the `TimetableWindow` to the user, the `timetable:HashSet` is obtained from `Logic` and `Model` and then
 sorted and converted to `String` which is displayed in the `TimetableWindow` which is now made visible.
 
+<div style="page-break-after: always;"></div>
+
 #### Design Considerations
 
 **Aspect: How to implement the timetable feature:**
@@ -636,29 +688,30 @@ sorted and converted to `String` which is displayed in the `TimetableWindow` whi
   * Pros: User does not have to run a command to see his/her and his/her contact's timetable.
   * Cons: User may have to scroll if there is insufficient space to see the full timetable.
 
-* **Alternative 2:** User runs a command to display his/her and his/her contact's timetable which creates a new window.
+* **Alternative 2 (current choice):** User runs a command to display his/her and his/her contact's timetable which creates a new window.
   * Pros: User will have a larger space to see the timetable.
   * Cons: We must ensure the implementation of the additional commands are correct and the UI displays correctly.
 
-* **Decision:** Since we expect the timetable feature to not be used often (only when arranging meetings), we chose alternative 1
-to reduce the clutter on the main window.
+* **Decision:** We chose Alternative 2 to reduce the clutter on the main window since we expect the timetable feature to not be used often but only when arranging meetings or when user needs to view the timetable.
 
-Possible Extensions:
+<div markdown="span" class="alert alert-info">:information_source: **Note:** When a new `Lesson` is added, User has to run the command to show the timetable again to view the updated timetable with the newly added `Lesson`.
 
-1. Adding a `Link` field to allow Users to keep track of important links such as Coursemology, Microsoft Teams, Zoom
-   lecture and project documents (ie. Google Docs) for each module to increase accessibility and convenience since there
-   are many links to keep track off.
+</div>
 
-2. Allow User to sort his/her classes from all modules in chronological order or by modules depending on the User's
+#### Possible Extensions
+
+1. Allow User to sort his/her classes from all modules in chronological order or by modules depending on the User's
    preference to view his/her timetable.
 
-3. Improving the GUI of the `Timetable` pop-up window for more visually pleasing user experience.
+2. Improving the GUI of the `Timetable` pop-up window for more visually pleasing user experience.
 
 [Scroll back to top](#table-of-contents)
 
-### Undo / Redo
+<div style="page-break-after: always;"></div>
 
-#### Proposed Implementation
+### **Undo / Redo**
+
+#### Implementation
 
 The proposed undo/redo mechanism is facilitated by `VersionedAddressBook`. It extends `AddressBook` with an undo/redo history, stored internally as an `addressBookStateList` and `currentStatePointer`. Additionally, it implements the following operations:
 
@@ -674,19 +727,24 @@ Step 1. The user launches the application for the first time. The `VersionedAddr
 
 ![UndoRedoState0](images/UndoRedoState0.png)
 
-Step 2. The user executes `delete 5` command to delete the 5th person in the address book. The `delete` command calls `Model#commitAddressBook()`, causing the modified state of the address book after the `delete 5` command executes to be saved in the `addressBookStateList`, and the `currentStatePointer` is shifted to the newly inserted address book state.
+<div style="page-break-after: always;"></div>
+
+Step 2. The user executes `user n/Silas p/98765432 e/silastay@gmail.com a/Kent Ridge Drive g/SilasTSL curr/CS2100 prev/CS1101S plan/CS2109` command to add a new User to the address book. The "Add User" command calls `Model#commitAddressBook()`, causing the modified state of the address book after the "Add User" command executes to be saved in the `addressBookStateList`, and the `currentStatePointer` is shifted to the newly inserted address book state.
 
 ![UndoRedoState1](images/UndoRedoState1.png)
 
-Step 3. The user executes `add n/David …​` to add a new person. The `add` command also calls `Model#commitAddressBook()`, causing another modified address book state to be saved into the `addressBookStateList`.
+<div style="page-break-after: always;"></div>
+
+Step 3. The user executes `delete user` to delete the newly created user. The `delete user` command also calls `Model#commitAddressBook()`, causing another modified address book state to be saved into the `addressBookStateList`, and again the `currentStatePointer` is shifted to the newly inserted address book state.
 
 ![UndoRedoState2](images/UndoRedoState2.png)
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:** If a command fails its execution, it will not call `Model#commitAddressBook()`, so the address book state will not be saved into the `addressBookStateList`.
 
 </div>
+<div style="page-break-after: always;"></div>
 
-Step 4. The user now decides that adding the person was a mistake, and decides to undo that action by executing the `undo` command. The `undo` command will call `Model#undoAddressBook()`, which will shift the `currentStatePointer` once to the left, pointing it to the previous address book state, and restores the address book to that state.
+Step 4. The user now decides that deleting the user was a mistake, and decides to undo that action by executing the `undo` command. The `undo` command will call `Model#undoAddressBook()`, which will shift the `currentStatePointer` once to the left, pointing it to the previous address book state, and restores the address book to that state.
 
 ![UndoRedoState3](images/UndoRedoState3.png)
 
@@ -694,6 +752,7 @@ Step 4. The user now decides that adding the person was a mistake, and decides t
 than attempting to perform the undo.
 
 </div>
+<div style="page-break-after: always;"></div>
 
 The following sequence diagram shows how the undo operation works:
 
@@ -708,18 +767,17 @@ The `redo` command does the opposite — it calls `Model#redoAddressBook()`,
 <div markdown="span" class="alert alert-info">:information_source: **Note:** If the `currentStatePointer` is at index `addressBookStateList.size() - 1`, pointing to the latest address book state, then there are no undone AddressBook states to restore. The `redo` command uses `Model#canRedoAddressBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo.
 
 </div>
+<div style="page-break-after: always;"></div>
 
 Step 5. The user then decides to execute the command `list`. Commands that do not modify the address book, such as `list`, will usually not call `Model#commitAddressBook()`, `Model#undoAddressBook()` or `Model#redoAddressBook()`. Thus, the `addressBookStateList` remains unchanged.
 
 ![UndoRedoState4](images/UndoRedoState4.png)
 
-Step 6. The user executes `clear`, which calls `Model#commitAddressBook()`. Since the `currentStatePointer` is not pointing at the end of the `addressBookStateList`, all address book states after the `currentStatePointer` will be purged. Reason: It no longer makes sense to redo the `add n/David …​` command. This is the behavior that most modern desktop applications follow.
+Step 6. The user now decides that the undo was a mistake, and decides to redo that action by executing the `redo` command. The `redo` command will call `Model#redoAddressBook()`, which will shift the `currentStatePointer` once to the right, pointing it to the forward address book state, and restores the address book to that state.
 
 ![UndoRedoState5](images/UndoRedoState5.png)
 
-The following activity diagram summarizes what happens when a user executes a new command:
-
-<img src="images/CommitActivityDiagram.png" width="250" />
+<div style="page-break-after: always;"></div>
 
 #### State Management
 
@@ -727,13 +785,23 @@ Implementing Undo/Redo commands in this manner requires the developers to strict
 1. Every command (that can be undone/redone) should produce and save a new state of the AddressBook
 2. Every AddressBook should not be related to another
    - Every instance in each AddressBook should be completely new with new data
-   - E.g. Changing the User's name field should create a new User Object with the desired new name, instead of changing the exisitng User objects name.
+   - For example:
+      1. We first create a user with name field "Bob".
+     ![StateManagement0](images/StateManagement0.png)
+      2. Editing the User's name field to "Tim" should create a new User Object with the desired new name, instead of changing the existing User object's name.
+     ![StateManagement1](images/StateManagement1.png)
    - This is because each state of the AddressBook must be unique from one another
-   
 
-#### Implementation
+Here's what a typical Object Diagram may look like for an Address Book State:
+![UndoRedoObjectDiagram](images/UndoRedoObjectDiagram.png)
+- In this diagram, `ab0` is the initial AddressBook state that contains two contact, `bob0` and `alice0`.
+- After the user makes a change to the contact `bob0`, we have to save a new `AddressBook` into our `VersionedAddressBook`, with a new `bob1` Object that embodies the changed `bob0` Object, instead of just making the change to the `bob0` Object directly.
 
-Given below are the proposed Classes to implement:
+<div style="page-break-after: always;"></div>
+
+#### New Classes/Methods
+
+Given below are the new Classes implemented:
 
 * `VersionedAddressBook`
   * Extends `AddressBook` with an Undo/Redo history
@@ -750,13 +818,15 @@ Given below are the proposed Classes to implement:
     * Shifts `currentStatePointer` forward by one
     * Called after user inputs `redo` command
 
-Given below are the proposed Methods to implement:
+Given below are the new Methods implemented:
 * `Model`
   * `Model#canUndoAddressBook()` - Checks if there is a previous `AddressBook` state
   * `Model#canRedoAddressBook()` - Checks if there is a forward `AddressBook` state
   * `Model#undoAddressBook()` - Changes the current Model to read from the previous `AddressBook` state
   * `Model#redoAddressBook()` - Changes the current Model to read from the next `AddressBook` state
   * `Model#commitAddressBook()` - Saves current `AddressBook` state into `addressBookStateList`
+
+<div style="page-break-after: always;"></div>
 
 #### Design Considerations
 
@@ -773,7 +843,9 @@ Given below are the proposed Methods to implement:
 
 [Scroll back to top](#table-of-contents)
 
-### Filter Feature
+<div style="page-break-after: always;"></div>
+
+### **Filter Feature**
 ConnectNUS has a filter function that allows you to filter all persons in your contact list according to `Tag`, `CurrentModule`,
 `PreviousModule` or `PlannedModule`. This allows you to find people who are taking specific mods such that you
 are able to reach out to friends for collaboration more quickly.
@@ -792,23 +864,26 @@ that is shown in the `MainWindow` class as a `PersonListPanel`. When a `filterTa
 updates it's `filteredPersons` attribute to only contain `Person`s with any of the `Tag`s specified by the user.
 The `PersonListPanel` in the `MainWindow` UI is then updated accordingly.
 
+<div style="page-break-after: always;"></div>
+
 #### Design Considerations
 
-**Aspect: The implementation of the various filter features ie. filtering by Tag, filtering by Current Module, filtering by Previous Module and filtering by Planned Module:**
+**Aspect: The implementation of the various filter features i.e. filtering by Tag, filtering by Current Module, filtering by Previous Module and filtering by Planned Module:**
 
 * **Alternative 1:** Creating a common filter parent class with each specific filter function extending from the parent filter class.
-* Pros: Since all filter functions require the same methods, it would be easier to implement filter functions with the different specifications in ConnectNUS. Furthermore, it allows developers to create new filter functions for future features that may be added to the application in future iterations.
+  * Pros: Since all filter functions require the same methods, it would be easier to implement filter functions with the different specifications in ConnectNUS. Furthermore, it allows developers to create new filter functions for future features that may be added to the application in future iterations.
   * Cons: the different filtering features would have to access different classes located in different packages to filter the contact list
 
-* **Alternative 2:** Abstracting out each filter feature as a different class which directly extends the command class.
+* **Alternative 2 (current choice):** Abstracting out each filter feature as a different class which directly extends the command class.
   * Pros: Less confusing for developers as each filtering feature would have to access different classes depending on the feature that is being filtered. Furthermore, each filter feature's classes would belong in different packages within the programme due to the fact that it filters different features.
   * Cons: Future implementations of filter functions for new features that may be added to the programme would have to be created from scratch.
 
-* **Decision:** We decided to use alternative 2 as we do not foresee new features being added to the programme which would require filtering functions in the new feature based on the current purpose of our app. Furthermore, it would not be difficult to implement a parent abstract filter class for the filter function in future iterations should we need to do so.
+* **Decision:** We decided to use Alternative 2 as we do not foresee new features being added to the programme which would require filtering functions in the new feature based on the current purpose of our app. Furthermore, it would not be difficult to implement a parent abstract filter class for the filter function in future iterations should we need to do so.
 
 [Scroll back to top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## **Documentation, logging, testing, configuration, dev-ops**
 
@@ -821,6 +896,7 @@ The `PersonListPanel` in the `MainWindow` UI is then updated accordingly.
 [Scroll back to top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## **Appendix: Requirements**
 
@@ -869,6 +945,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Use Cases
 
 **System: ConnectNUS**
@@ -909,8 +987,10 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     * 3a1. ConnectNUS requests for the correct data.
     * 3a2. CS Student enters new data.
-    * Steps 3a-3b are repeated until the data entered are correct.
+    * Steps 3a1-3a2 are repeated until the data entered are correct.
       Use case resumes at step 4.
+
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -937,7 +1017,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     * 3a1. ConnectNUS requests for the correct data.
     * 3a2. CS Student enters new data.
-    * Steps 3a-3b are repeated until the data entered are correct.
+    * Steps 3a1-3a2 are repeated until the data entered are correct.
       Use case resumes at step 4.
 
 **System: ConnectNUS**
@@ -965,6 +1045,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
       Steps 1a1-1a2 are repeated until the data entered are correct.
       Use case resumes at step 2.
 
+<div style="page-break-after: always;"></div>
+
 **System: ConnectNUS**
 
 **Use case: UC5 - Save a new contact**
@@ -985,7 +1067,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     * 3a1. ConnectNUS requests for the correct data.
     * 3a2. CS Student enters new data.
-    * Steps 3a-3b are repeated until the data entered are correct.
+    * Steps 3a2-3a2 are repeated until the data entered are correct.
     Use case resumes at step 4.
 
 **System: ConnectNUS**
@@ -1014,8 +1096,10 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     * 3a1. ConnectNUS requests for the correct data.
     * 3a2. CS Student enters new data.
-    * Steps 3a-3b are repeated until the data entered are correct.
+    * Steps 3a1-3a2 are repeated until the data entered are correct.
       Use case resumes at step 4.
+
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -1053,6 +1137,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 * 2a. The list is empty.
     Use case ends.
+
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -1099,6 +1185,8 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     Step 1a1 is repeated until the data entered are correct.
     Use case resumes at step 2.
 
+<div style="page-break-after: always;"></div>
+
 **System: ConnectNUS**
 
 **Use case: UC11 - Edit user's module list**
@@ -1124,8 +1212,10 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
   * 3a1. ConnectNUS requests for the correct data.
   * 3a2. CS Student enters new data.
-  * Steps 3a-3b are repeated until the data entered are correct.
+  * Steps 3a1-3a2 are repeated until the data entered are correct.
     Use case resumes at step 4.
+
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -1154,8 +1244,10 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
   * 3a1. ConnectNUS requests for the correct data.
   * 3a2. CS Student enters new data.
-  * Steps 3a-3b are repeated until the data entered are correct.
+  * Steps 3a1-3a2 are repeated until the data entered are correct.
     Use case resumes at step 4.
+
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -1210,6 +1302,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     Steps 1b1 and 1b2 are repeated until the lesson entered does not have an invalid timing.
     Use case resumes at step 2.
 
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -1264,6 +1357,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     Steps 1b1 and 1b2 are repeated until the lesson entered exists.
     Use case resumes at step 2.
 
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -1314,6 +1408,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     * 1b1. ConnectNUS informs user of missing data.
     * Use case ends.
 
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -1360,6 +1455,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * 2a. No current modules for user and all persons in the contact list.
   * Use case ends.
 
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -1408,6 +1504,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * 2a. The list is empty.
   Use case ends.
 
+<div style="page-break-after: always;"></div>
 
 **System: ConnectNUS**
 
@@ -1456,6 +1553,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * 2a. The list is empty.
   Use case ends.
 
+<div style="page-break-after: always;"></div>
 
 ### Non-Functional Requirements
 
@@ -1463,16 +1561,16 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 2. Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.
 3. A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
 4. Should be a result of evolving AB3 code base.
-5. Should be for a single user.
-6. Should not use any Database Management System.
-7. Should be platform independent and work on Windows, Linus and OS-X.
-8. Should work without an installer and without approved third-party frameworks/libraries/services.
-9. Should be able to package into a single JAR file.
-10. JAR file size should not exceed 100MB and Documents should not exceed 15 MB per file.
+5. Should not use any Database Management System.
+6. Should be platform independent and work on Windows, Linus and OS-X.
+7. Should work without an installer and without approved third-party frameworks/libraries/services.
+8. Should be able to package into a single JAR file.
+9. JAR file size should not exceed 100MB and Documents should not exceed 15 MB per file.
 
 [Scroll back to top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 ## **Appendix: Instructions for Manual Testing**
 
@@ -1506,6 +1604,8 @@ testers are expected to do more *exploratory* testing.
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Adding a user
 
 1. Adding a user when there is no existing user profile
@@ -1522,6 +1622,8 @@ testers are expected to do more *exploratory* testing.
       Expected: Similar to previous.
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Editing a user or person
 
@@ -1553,6 +1655,8 @@ testers are expected to do more *exploratory* testing.
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Deleting a user or person
 
 1. Deleting an existing user profile
@@ -1582,6 +1686,8 @@ testers are expected to do more *exploratory* testing.
       Expected: Similar to previous.
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Editing a user's or person's modules
 
@@ -1613,6 +1719,8 @@ testers are expected to do more *exploratory* testing.
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Checking modules left
 
 1. Checking modules left when there is an existing user profile
@@ -1629,6 +1737,8 @@ testers are expected to do more *exploratory* testing.
       Expected: Similar to previous.
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Adding a lesson, Showing the timetable
 
@@ -1665,6 +1775,8 @@ testers are expected to do more *exploratory* testing.
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Removing a lesson, Showing the timetable
 
 1. Remove a lesson from user
@@ -1693,6 +1805,8 @@ testers are expected to do more *exploratory* testing.
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Refreshing to a new semester
 
 1. Updating user and contacts previous modules list and clearing their current modules list when a new semester begins
@@ -1706,6 +1820,8 @@ testers are expected to do more *exploratory* testing.
      Expected: Status message shows that the user is deleted. Status message shows "No user created!"
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Filtering contacts tags
 
@@ -1724,6 +1840,8 @@ testers are expected to do more *exploratory* testing.
 
 [Scroll back to top](#table-of-contents)
 
+<div style="page-break-after: always;"></div>
+
 ### Filtering contacts modules
 
 1. Listing out all persons in contact list with the current/previous/planned module(s)
@@ -1739,6 +1857,8 @@ testers are expected to do more *exploratory* testing.
      [Scroll back to top](#table-of-contents)
 
 [Scroll back to top](#table-of-contents)
+
+<div style="page-break-after: always;"></div>
 
 ### Saving data
 
